@@ -1,0 +1,188 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/MapView.gd" id="1_map"]
+[ext_resource type="Script" path="res://scripts/UI.gd" id="2_ui"]
+
+[node name="Main" type="Node2D"]
+
+[node name="MapView" type="Node2D" parent="."]
+script = ExtResource("1_map")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+offset_left = 880.0
+offset_top = 8.0
+offset_right = 1272.0
+offset_bottom = 712.0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+
+[node name="VBox" type="VBoxContainer" parent="UI/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="ControlRoot" type="Control" parent="UI/Panel/MarginContainer/VBox"]
+layout_mode = 2
+script = ExtResource("2_ui")
+
+[node name="SummaryLabel" type="Label" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+unique_name_in_owner = true
+offset_right = 350.0
+offset_bottom = 23.0
+text = "Summary"
+
+[node name="SelectionLabel" type="Label" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+unique_name_in_owner = true
+offset_top = 28.0
+offset_right = 350.0
+offset_bottom = 51.0
+text = "Selection"
+
+[node name="TownLabel" type="Label" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+unique_name_in_owner = true
+offset_top = 56.0
+offset_right = 350.0
+offset_bottom = 120.0
+autowrap_mode = 2
+text = "Town"
+
+[node name="ArmyLabel" type="Label" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+unique_name_in_owner = true
+offset_top = 125.0
+offset_right = 350.0
+offset_bottom = 190.0
+autowrap_mode = 2
+text = "Army"
+
+[node name="BuildTown" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 196.0
+offset_right = 180.0
+offset_bottom = 227.0
+text = "Build Town"
+
+[node name="UpgradeTown" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 232.0
+offset_right = 180.0
+offset_bottom = 263.0
+text = "Upgrade Town"
+
+[node name="Market" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 268.0
+offset_right = 180.0
+offset_bottom = 299.0
+text = "Build Market"
+
+[node name="Granary" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 304.0
+offset_right = 180.0
+offset_bottom = 335.0
+text = "Build Granary"
+
+[node name="Barracks" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 340.0
+offset_right = 180.0
+offset_bottom = 371.0
+text = "Build Barracks"
+
+[node name="Smith" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 376.0
+offset_right = 180.0
+offset_bottom = 407.0
+text = "Build Smith"
+
+[node name="RecruitMilitia" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 412.0
+offset_right = 180.0
+offset_bottom = 443.0
+text = "Recruit Militia (Town)"
+
+[node name="RecruitArcher" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 448.0
+offset_right = 180.0
+offset_bottom = 479.0
+text = "Recruit Archer (Army)"
+
+[node name="RecruitCavalry" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 484.0
+offset_right = 180.0
+offset_bottom = 515.0
+text = "Recruit Cavalry (Army)"
+
+[node name="MoveUp" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_left = 190.0
+offset_top = 412.0
+offset_right = 280.0
+offset_bottom = 443.0
+text = "Move Up"
+
+[node name="MoveLeft" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_left = 190.0
+offset_top = 448.0
+offset_right = 280.0
+offset_bottom = 479.0
+text = "Move Left"
+
+[node name="MoveRight" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_left = 286.0
+offset_top = 448.0
+offset_right = 376.0
+offset_bottom = 479.0
+text = "Move Right"
+
+[node name="MoveDown" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_left = 286.0
+offset_top = 412.0
+offset_right = 376.0
+offset_bottom = 443.0
+text = "Move Down"
+
+[node name="EndTurn" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 520.0
+offset_right = 180.0
+offset_bottom = 551.0
+text = "End Turn"
+
+[node name="Save" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 556.0
+offset_right = 180.0
+offset_bottom = 587.0
+text = "Save"
+
+[node name="Load" type="Button" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+offset_top = 592.0
+offset_right = 180.0
+offset_bottom = 623.0
+text = "Load"
+
+[node name="StatusLabel" type="Label" parent="UI/Panel/MarginContainer/VBox/ControlRoot"]
+unique_name_in_owner = true
+offset_top = 628.0
+offset_right = 376.0
+offset_bottom = 680.0
+autowrap_mode = 2
+text = ""
+
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/BuildTown" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_build_town_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/UpgradeTown" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_upgrade_town_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/Market" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_market_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/Granary" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_granary_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/Barracks" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_barracks_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/Smith" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_smith_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/RecruitMilitia" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_recruit_militia_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/RecruitArcher" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_recruit_archer_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/RecruitCavalry" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_recruit_cavalry_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/MoveUp" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_move_up_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/MoveDown" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_move_down_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/MoveLeft" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_move_left_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/MoveRight" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_move_right_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/EndTurn" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_end_turn_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/Save" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_save_pressed"]
+[connection signal="pressed" from="UI/Panel/MarginContainer/VBox/ControlRoot/Load" to="UI/Panel/MarginContainer/VBox/ControlRoot" method="_on_load_pressed"]

@@ -1,0 +1,24 @@
+{
+  "buildings": {
+    "market": {
+      "cost_gold": 80,
+      "gold_bonus": 10,
+      "food_bonus": 0
+    },
+    "granary": {
+      "cost_gold": 70,
+      "gold_bonus": 0,
+      "food_bonus": 12
+    },
+    "barracks": {
+      "cost_gold": 90,
+      "gold_bonus": 2,
+      "food_bonus": 0
+    },
+    "smith": {
+      "cost_gold": 110,
+      "gold_bonus": 5,
+      "food_bonus": 0
+    }
+  }
+}

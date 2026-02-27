@@ -1,0 +1,28 @@
+{
+  "relics": [
+    {
+      "id": "coin_hoard",
+      "name": "Coin Hoard",
+      "description": "A hidden Roman treasury boosts tax efficiency.",
+      "modifiers": [
+        { "type": "gold_income_mult", "value": 0.05 }
+      ]
+    },
+    {
+      "id": "imperial_charter",
+      "name": "Imperial Charter",
+      "description": "A legal decree allows larger city planning.",
+      "modifiers": [
+        { "type": "town_level_cap_bonus", "value": 1 }
+      ]
+    },
+    {
+      "id": "steppe_tablet",
+      "name": "Steppe Tablet",
+      "description": "Ancient tactics unlock horse-lord traditions.",
+      "modifiers": [
+        { "type": "unlock_unit_tag", "value": "horse_lords" }
+      ]
+    }
+  ]
+}
