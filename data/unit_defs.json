@@ -1,0 +1,29 @@
+{
+  "units": {
+    "militia": {
+      "display_name": "Militia",
+      "cost_gold": 25,
+      "cost_food": 8,
+      "upkeep_gold": 2,
+      "upkeep_food": 1,
+      "move_points": 4
+    },
+    "archer": {
+      "display_name": "Archer",
+      "cost_gold": 40,
+      "cost_food": 10,
+      "upkeep_gold": 3,
+      "upkeep_food": 1,
+      "move_points": 4
+    },
+    "cavalry": {
+      "display_name": "Cavalry",
+      "cost_gold": 70,
+      "cost_food": 15,
+      "upkeep_gold": 5,
+      "upkeep_food": 2,
+      "move_points": 5,
+      "required_tag": "horse_lords"
+    }
+  }
+}

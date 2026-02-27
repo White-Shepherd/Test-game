@@ -1,0 +1,47 @@
+{
+  "turn": 3,
+  "next_town_id": 2,
+  "next_army_id": 2,
+  "empire": {
+    "gold": 240,
+    "food": 150,
+    "gold_income_mult": 1.05,
+    "town_level_cap_bonus": 0,
+    "unlocked_unit_tags": []
+  },
+  "map": {
+    "width": 6,
+    "height": 6,
+    "selected_tile": { "x": 2, "y": 2 },
+    "tiles": {
+      "2,2": { "terrain": "plains", "town_id": 1, "army_id": 1 }
+    }
+  },
+  "towns": {
+    "1": {
+      "id": 1,
+      "name": "Roma",
+      "x": 2,
+      "y": 2,
+      "level": 2,
+      "buildings": ["market"],
+      "garrison": { "militia": 2 },
+      "base_gold": 20,
+      "base_food": 12
+    }
+  },
+  "armies": {
+    "1": {
+      "id": 1,
+      "x": 2,
+      "y": 2,
+      "move_points": 3,
+      "max_move_points": 4,
+      "units": { "archer": 1 }
+    }
+  },
+  "relics": {
+    "spawned": {},
+    "claimed": []
+  }
+}
